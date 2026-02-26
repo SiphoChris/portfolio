@@ -27,12 +27,39 @@ type SocialLink = {
   link: string
 }
 
+type SkillCategory = {
+  name: string
+  skills: string[]
+}
+
+export const TITLES: string[] = [
+  'Full Stack Developer',
+  'Frontend Engineer',
+  'Backend Developer',
+  'OSS Contributor',
+]
+
+export const SKILL_CATEGORIES: SkillCategory[] = [
+  {
+    name: 'Frontend',
+    skills: ['React', 'Next.js', 'TypeScript', 'Tailwind CSS', 'Framer Motion'],
+  },
+  {
+    name: 'Backend',
+    skills: ['Node.js', 'tRPC', 'Prisma', 'PostgreSQL', 'REST APIs'],
+  },
+  {
+    name: 'Tooling & Infra',
+    skills: ['Git', 'Vercel', 'Docker', 'GitHub Actions', 'npm'],
+  },
+]
+
 export const PROJECTS: Project[] = [
   {
     name: 'South African ID',
     description:
       'OSS package for validating; extracting; and validating South African ID numbers.',
-    link: 'https://pro.motion-primitives.com/',
+    link: 'https://www.npmjs.com/package/@south-african/id',
     image: 'https://res.cloudinary.com/dfjfdrloj/image/upload/v1772112746/sa-id-portfolio_tdyfjc.png',
     id: 'project1',
   },
@@ -41,12 +68,10 @@ export const PROJECTS: Project[] = [
     description:
       'OSS project that gives you production-ready interactive learning components you can drop into your LMS app in minutes.',
     link: 'https://lmscn.vercel.app/',
-    "image": "https://res.cloudinary.com/dfjfdrloj/image/upload/v1772112744/lmscn-portfolio_hlrasb.png",
+    image: 'https://res.cloudinary.com/dfjfdrloj/image/upload/v1772112744/lmscn-portfolio_hlrasb.png',
     id: 'project2',
   },
 ]
-
-// image: 'https://placehold.co/800x450',
 
 export const WORK_EXPERIENCE: WorkExperience[] = [
   {
@@ -61,17 +86,17 @@ export const WORK_EXPERIENCE: WorkExperience[] = [
 
 export const BLOG_POSTS: BlogPost[] = [
   {
-  title: 'I Built an Open-Source Component Registry for Interactive Learning — Here\'s Why',
-  description: 'Before building my edtech project, I needed the primitives. So I built them for everyone.',
-  link: '/blog/i-built-an-open-source-component-registry-for-interactive-learning',
-  uid: 'blog-1',
-},
-{
-  title: 'My First npm Package — What Nobody Tells You About Publishing OSS',
-  description: 'A look back at building and publishing @south-african/id — my first npm package, what broke, what I learned, and why I claimed an entire npm org.',
-  link: '/blog/my-first-npm-package',
-  uid: 'blog-2',
-}
+    title: 'I Built an Open-Source Component Registry for Interactive Learning — Here\'s Why',
+    description: 'Before building my edtech project, I needed the primitives. So I built them for everyone.',
+    link: '/blog/i-built-an-open-source-component-registry-for-interactive-learning',
+    uid: 'blog-1',
+  },
+  {
+    title: 'My First npm Package — What Nobody Tells You About Publishing OSS',
+    description: 'A look back at building and publishing @south-african/id — my first npm package, what broke, what I learned, and why I claimed an entire npm org.',
+    link: '/blog/my-first-npm-package',
+    uid: 'blog-2',
+  },
 ]
 
 export const SOCIAL_LINKS: SocialLink[] = [
@@ -86,3 +111,7 @@ export const SOCIAL_LINKS: SocialLink[] = [
 ]
 
 export const EMAIL = 'siphonkebe@gmail.com'
+
+
+
+// image: 'https://placehold.co/800x450',

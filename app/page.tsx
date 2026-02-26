@@ -18,6 +18,8 @@ import {
   BLOG_POSTS,
   EMAIL,
   SOCIAL_LINKS,
+  TITLES,
+  SKILL_CATEGORIES,
 } from './data'
 
 const VARIANTS_CONTAINER = {
@@ -121,18 +123,57 @@ export default function Personal() {
       initial="hidden"
       animate="visible"
     >
+      {/* Intro + Titles */}
       <motion.section
         variants={VARIANTS_SECTION}
         transition={TRANSITION_SECTION}
       >
-        <div className="flex-1">
+        <div className="flex-1 space-y-4">
           <p className="text-zinc-600 dark:text-zinc-400">
             Focused on creating intuitive and performant web experiences.
             Bridging the gap between design and development. OSS enthusiast.
           </p>
+          <div className="flex flex-wrap gap-2">
+            {TITLES.map((title) => (
+              <span
+                key={title}
+                className="inline-flex items-center rounded-full border border-zinc-200 bg-zinc-50 px-3 py-1 text-sm text-zinc-700 dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-300"
+              >
+                {title}
+              </span>
+            ))}
+          </div>
         </div>
       </motion.section>
 
+      {/* Skills */}
+      <motion.section
+        variants={VARIANTS_SECTION}
+        transition={TRANSITION_SECTION}
+      >
+        <h3 className="mb-5 text-lg font-medium">Skills</h3>
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
+          {SKILL_CATEGORIES.map((category) => (
+            <div key={category.name} className="rounded-2xl border border-zinc-200/60 bg-zinc-50/40 p-4 dark:border-zinc-800/60 dark:bg-zinc-950/40">
+              <h4 className="mb-3 text-sm font-medium text-zinc-500 dark:text-zinc-400">
+                {category.name}
+              </h4>
+              <div className="flex flex-wrap gap-1.5">
+                {category.skills.map((skill) => (
+                  <span
+                    key={skill}
+                    className="inline-flex items-center rounded-md bg-zinc-100 px-2 py-0.5 text-sm text-zinc-800 dark:bg-zinc-800 dark:text-zinc-200"
+                  >
+                    {skill}
+                  </span>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+      </motion.section>
+
+      {/* Projects */}
       <motion.section
         variants={VARIANTS_SECTION}
         transition={TRANSITION_SECTION}
@@ -165,6 +206,7 @@ export default function Personal() {
         </div>
       </motion.section>
 
+      {/* Work Experience */}
       <motion.section
         variants={VARIANTS_SECTION}
         transition={TRANSITION_SECTION}
@@ -203,6 +245,7 @@ export default function Personal() {
         </div>
       </motion.section>
 
+      {/* Blog */}
       <motion.section
         variants={VARIANTS_SECTION}
         transition={TRANSITION_SECTION}
@@ -239,6 +282,7 @@ export default function Personal() {
         </div>
       </motion.section>
 
+      {/* Connect */}
       <motion.section
         variants={VARIANTS_SECTION}
         transition={TRANSITION_SECTION}
