@@ -1,0 +1,120 @@
+export const metadata = {
+  title: 'My First npm Package — What Nobody Tells You About Publishing OSS',
+  description: 'A look back at building and publishing @south-african/id — my first npm package, what broke, what I learned, and why I claimed an entire npm org.',
+  link: '/blog/my-first-npm-package',
+  uid: 'blog-2',
+}
+
+# My First npm Package — What Nobody Tells You About Publishing OSS
+
+*A look back at `@south-african/id`, the config rabbit hole I wasn't ready for, and why I claimed an entire npm org.*
+
+---
+
+I just looked back at my first ever npm package and had a moment. 😅
+
+`@south-african/id` — a utility for validating and parsing South African ID numbers. Small, simple, nothing revolutionary. But it was mine. And getting it to that point was genuinely harder than I expected.
+
+## The Starter Problem
+
+I'd always worked off starters. Clone this, run `npm install`, everything's wired up. You get a working dev server, a build pipeline, TypeScript configured, exports sorted. You write your code, it works, you ship. Simple.
+
+What starters don't do is teach you what they're doing. And I didn't realise how much I was leaning on that until the day I sat down to build something from scratch.
+
+First question: how do you even structure a package? Second question: what goes in `tsconfig.json`, and why does it look different from every example I could find? Third question: what is the difference between `main`, `module`, and `exports` in `package.json`, and why do some packages have all three?
+
+These aren't exotic questions. They're the basics. But when you've always had them answered for you, you've never actually had to think through them.
+
+So I did. Slowly. With a lot of tabs open.
+
+## What I Actually Had to Figure Out
+
+The `tsconfig.json` rabbit hole alone was a morning. I needed to understand the difference between what TypeScript needs to *check* your code versus what it needs to *compile* it. The `declaration` flag. The `outDir`. Why `moduleResolution` matters when you're shipping a package that other people's projects will consume, not just running in a browser.
+
+Then `package.json` exports. The modern `exports` field lets you define what consumers get when they import your package — different entry points for ESM vs CJS, different paths for subpath imports. I'd seen this in other packages' source code and glossed over it. Now I had to actually write it.
+
+```json
+{
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  }
+}
+```
+
+That's a lot of fields pointing at a lot of files for a package whose core logic is maybe 60 lines of TypeScript. But every field is there for a reason. `main` for legacy CommonJS consumers. `module` for bundlers that understand ESM. `exports` for modern Node and bundlers that respect the package exports spec. `types` so TypeScript knows where your declarations are.
+
+Starters have been quietly handling all of this for you. Now you're the starter.
+
+## The Package Itself
+
+The utility itself is straightforward. A South African ID number is a 13-digit number that encodes:
+
+- **Date of birth** — first 6 digits, `YYMMDD`
+- **Gender** — digits 7–10, where 5000+ is male
+- **Citizenship** — digit 11, `0` for SA citizen, `1` for permanent resident
+- **A checksum digit** — the last digit, validated using the [Luhn algorithm](https://en.wikipedia.org/wiki/Luhn_algorithm)
+
+So `@south-african/id` parses and validates all of that. You pass it an ID number, it tells you if it's valid, and if it is, it hands back the structured data.
+
+```ts
+import { parseId, validateId } from '@south-african/id'
+
+validateId('9001045009087') // true
+
+const result = parseId('9001045009087')
+// {
+//   valid: true,
+//   dob: '1990-01-04',
+//   gender: 'male',
+//   citizenship: 'citizen',
+// }
+```
+
+Small API. Does one thing. Doesn't try to do more. That was an intentional call — the scope of a utility package should be legible from its name. If you import `@south-african/id`, you should get exactly what you expect.
+
+## `npm publish`
+
+After all of that — the config, the build, the types, the README — I ran `npm publish` for the first time.
+
+And then I refreshed the npm registry page.
+
+And saw my name on it.
+
+I felt unreasonably proud of a ~2kb utility, lol. But that feeling is real and I won't apologise for it. You built something. You put it on the registry. Anyone in the world can now `npm install` it. That's not nothing.
+
+## The Org
+
+Here's the part I'm actually most excited about: I checked whether the `@south-african` organisation on npm was taken.
+
+It wasn't.
+
+So I claimed it.
+
+That might sound like a small thing but I think it matters. The npm registry is full of scoped packages for frameworks, companies, and communities — `@angular`, `@vercel`, `@radix-ui`. The `@south-african` scope is a stake in the ground. It says: there's a developer here building tooling specifically for the South African context, and they're planning to do more of it.
+
+Because there's a real gap. Most developer tooling assumes a very specific context — US phone number formats, US address structures, US tax identifiers. When you're building products for South African users, you end up writing the same validation logic over and over because nobody's packaged it cleanly.
+
+ID numbers are just the start. There's VAT numbers, company registration numbers, bank account formats, South African phone numbers — all of it could be a well-typed, well-tested, well-documented package under `@south-african`. I'm planning to build them out.
+
+And it's not just South Africa. The same gap exists in dozens of regional contexts. Part of what I want to do with OSS is fill some of those gaps — utilities that are genuinely useful for developers outside the default assumptions of the ecosystem.
+
+## What I Actually Learned
+
+The package itself is simple. But the process taught me things that no starter ever could:
+
+**Configuration is design.** Every field in your `tsconfig`, every entry in your `exports` map, every decision about what to bundle and what to mark as a peer dependency — these are decisions that affect the people who use your package. Getting them wrong means your package is broken in someone's project in a way they can't easily debug. Getting them right is invisible, which is the goal.
+
+**Scope is a feature.** The instinct when building something is to make it do more. Resist it. A package that does one thing well, with a predictable API, is more useful than a package that tries to solve every adjacent problem. You can always add. You can't easily take away.
+
+**Publishing is the beginning, not the end.** The moment your package is on the registry, it's someone else's dependency. That means maintaining it, responding to issues, keeping the types accurate. Build something you're willing to own.
+
+---
+
+`@south-african/id` is [live on npm](https://www.npmjs.com/package/@south-african/id). More coming under `@south-african`. Watch this space. 👀

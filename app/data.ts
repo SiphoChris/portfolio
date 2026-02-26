@@ -64,6 +64,12 @@ export const BLOG_POSTS: BlogPost[] = [
   link: '/blog/i-built-an-open-source-component-registry-for-interactive-learning',
   uid: 'blog-1',
 },
+{
+  title: 'My First npm Package — What Nobody Tells You About Publishing OSS',
+  description: 'A look back at building and publishing @south-african/id — my first npm package, what broke, what I learned, and why I claimed an entire npm org.',
+  link: '/blog/my-first-npm-package',
+  uid: 'blog-2',
+}
 ]
 
 export const SOCIAL_LINKS: SocialLink[] = [
