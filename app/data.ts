@@ -42,15 +42,15 @@ export const TITLES: string[] = [
 export const SKILL_CATEGORIES: SkillCategory[] = [
   {
     name: 'Frontend',
-    skills: ['React', 'Next.js', 'TypeScript', 'Tailwind CSS', 'Framer Motion'],
+    skills: ['React', 'Next.js', 'JavaScript', 'TypeScript', 'Tailwind CSS', 'Astro', 'TailwindCSS'],
   },
   {
     name: 'Backend',
-    skills: ['Node.js', 'tRPC', 'Prisma', 'PostgreSQL', 'REST APIs'],
+    skills: ['Node.js', 'Express', 'Prisma', 'PostgreSQL', 'REST APIs', 'GraphQL'],
   },
   {
     name: 'Tooling & Infra',
-    skills: ['Git', 'Vercel', 'Docker', 'GitHub Actions', 'npm'],
+    skills: ['Git', 'Vercel', 'Docker', 'GitHub Actions', 'Cloudflare'],
   },
 ]
 
