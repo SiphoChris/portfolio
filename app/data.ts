@@ -2,7 +2,7 @@ type Project = {
   name: string
   description: string
   link: string
-  video: string
+  image: string
   id: string
 }
 
@@ -33,10 +33,17 @@ export const PROJECTS: Project[] = [
     description:
       'OSS package for validating; extracting; and validating South African ID numbers.',
     link: 'https://pro.motion-primitives.com/',
-    video:
-      'https://res.cloudinary.com/read-cv/video/upload/t_v_b/v1/1/profileItems/W2azTw5BVbMXfj7F53G92hMVIn32/newProfileItem/d898be8a-7037-4c71-af0c-8997239b050d.mp4?_a=DATAdtAAZAA0',
+    image: 'https://placehold.co/800x450',
     id: 'project1',
-  }
+  },
+  {
+    name: 'lmscn (a shadcn/ui registry)',
+    description:
+      'OSS project that gives you production-ready interactive learning components you can drop into your LMS app in minutes.',
+    link: 'https://lmscn.vercel.app/',
+    image: 'https://placehold.co/800x450',
+    id: 'project2',
+  },
 ]
 
 export const WORK_EXPERIENCE: WorkExperience[] = [
@@ -47,16 +54,16 @@ export const WORK_EXPERIENCE: WorkExperience[] = [
     end: '2025',
     link: 'https://lcstudio.co.za/',
     id: 'work1',
-  }
+  },
 ]
 
 export const BLOG_POSTS: BlogPost[] = [
   {
-    title: 'Exploring the Intersection of Design, AI, and Design Engineering',
-    description: 'How AI is changing the way we design',
-    link: '/blog/exploring-the-intersection-of-design-ai-and-design-engineering',
-    uid: 'blog-1',
-  }
+  title: 'I Built an Open-Source Component Registry for Interactive Learning — Here\'s Why',
+  description: 'Before building my edtech project, I needed the primitives. So I built them for everyone.',
+  link: '/blog/i-built-an-open-source-component-registry-for-interactive-learning',
+  uid: 'blog-1',
+},
 ]
 
 export const SOCIAL_LINKS: SocialLink[] = [
@@ -67,7 +74,7 @@ export const SOCIAL_LINKS: SocialLink[] = [
   {
     label: 'LinkedIn',
     link: 'https://www.linkedin.com/in/sipho-nkebe-979783312/',
-  }
+  },
 ]
 
 export const EMAIL = 'siphonkebe@gmail.com'

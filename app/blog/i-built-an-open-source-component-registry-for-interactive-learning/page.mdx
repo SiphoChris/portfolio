@@ -1,0 +1,73 @@
+export const metadata = {
+  title:
+    "I Built an Open-Source Component Registry for Interactive Learning — Here's Why",
+  description:
+    'Before building my edtech project, I needed the primitives. So I built them for everyone.',
+  alternates: {
+    canonical:
+      '/blog/i-built-an-open-source-component-registry-for-interactive-learning',
+  },
+}
+
+# I Built an Open-Source Component Registry for Interactive Learning — Here's Why
+
+I've been looking into building an edtech project, and before touching the product itself, I wanted to build the primitives that would support it. When I explored the ecosystem for interactive learning components — quizzes, flashcards, spaced repetition, drag-and-drop exercises — I noticed something: these are components with very similar behaviour, just different data. Yet every team rebuilds them from scratch.
+
+That felt like a gap worth closing. I wanted to give something back to the ecosystem that has given me everything I know about this craft, and remove the friction of rebuilding the same primitives over and over with no shared foundation. So I built one.
+
+---
+
+## What is lmscn?
+
+lmscn is an open-source registry of production-ready interactive learning components built on shadcn/ui and Tailwind v4. You install them the same way you install any shadcn component — you own the code completely and can wire them into whatever backend or LMS logic you already have.
+
+The registry includes ten components:
+
+- **Quiz** — single, multiple-choice, and true/false questions with scoring and pass/fail thresholds
+- **Flashcards** — 3D flip-cards with self-rating (Again / Hard / Good / Easy)
+- **Match** — click-to-match term and definition pairs with mistake tracking
+- **Fill in the Blank** — inline cloze exercises with multi-blank and alternative answer support
+- **Scramble** — letter-tile word unscrambling with image and text clues
+- **Order** — drag-and-drop or keyboard item sequencing
+- **Reading Passage** — reading comprehension across three phases: read, answer, review
+- **Progress Tracker** — gamified XP lesson map with streaks, levels, and unit progress
+- **Spaced Repetition** — SM-2 algorithm review sessions with computed next intervals
+- **Hotspot** — click markers on diagrams and type labels into popovers
+
+Each component is fully typed, accepts a single data prop, and fires an `onComplete` callback — so your application owns the logic, and the component handles the interaction.
+
+---
+
+## Why Build It at All?
+
+The options I found were either a heavyweight LMS platform that owned everything and let you customise nothing, or starting from zero and rebuilding patterns I'd already built before. There was no composable middle ground — components you could install, read, and modify freely.
+
+Beyond the practical gap, I wanted to contribute to the open-source ecosystem. shadcn/ui, Tailwind, and the broader React community have shaped how I think about building software. lmscn is my attempt to put something useful back.
+
+---
+
+## The Unexpected Lesson
+
+Building it taught me something I didn't expect: the hard part of learning software isn't the feature list — it's the feel.
+
+The moment a flashcard flips. The way feedback lands after a wrong answer. The difference between a component that technically works and one a student actually wants to engage with. These details live in small decisions — animation timing, colour on error states, focus management — and they are what make a learner stay or leave.
+
+They deserve the same engineering attention as any other part of a product. lmscn is my attempt to give those details a solid, reusable foundation so that other teams don't have to figure them out from scratch under pressure.
+
+---
+
+## Get Started
+
+Install any component the same way you would any shadcn primitive:
+
+```bash
+npx shadcn@latest add https://lmscn.vercel.app/r/quiz.json
+```
+
+The docs cover every component's props, data shape, and result types in full.
+
+🔗 [lmscn.vercel.app](https://lmscn.vercel.app)
+
+---
+
+If you're working on edtech, internal training tools, or anything that teaches — I'd love for you to take a look, and even more so to hear what you think.
