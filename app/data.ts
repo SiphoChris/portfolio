@@ -33,7 +33,7 @@ export const PROJECTS: Project[] = [
     description:
       'OSS package for validating; extracting; and validating South African ID numbers.',
     link: 'https://pro.motion-primitives.com/',
-    image: 'https://placehold.co/800x450',
+    image: 'https://res.cloudinary.com/dfjfdrloj/image/upload/v1772112746/sa-id-portfolio_tdyfjc.png',
     id: 'project1',
   },
   {
@@ -41,10 +41,12 @@ export const PROJECTS: Project[] = [
     description:
       'OSS project that gives you production-ready interactive learning components you can drop into your LMS app in minutes.',
     link: 'https://lmscn.vercel.app/',
-    image: 'https://placehold.co/800x450',
+    "image": "https://res.cloudinary.com/dfjfdrloj/image/upload/v1772112744/lmscn-portfolio_hlrasb.png",
     id: 'project2',
   },
 ]
+
+// image: 'https://placehold.co/800x450',
 
 export const WORK_EXPERIENCE: WorkExperience[] = [
   {
