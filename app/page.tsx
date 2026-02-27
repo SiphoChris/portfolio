@@ -1,6 +1,6 @@
 'use client'
 import { motion } from 'motion/react'
-import { XIcon, ExternalLink } from 'lucide-react'
+import { XIcon, ExternalLink, ArrowUpRightFromSquare } from 'lucide-react'
 import { Spotlight } from '@/components/ui/spotlight'
 import { Magnetic } from '@/components/ui/magnetic'
 import {
@@ -92,6 +92,7 @@ function MagneticSocialLink({
     <Magnetic springOptions={{ bounce: 0 }} intensity={0.3}>
       <Link
         href={link}
+        target='_blank'
         className="group relative inline-flex shrink-0 items-center gap-2 rounded-full bg-zinc-100 px-2.5 py-1 text-sm text-black transition-colors duration-200 hover:bg-zinc-950 hover:text-zinc-50 dark:bg-zinc-800 dark:text-zinc-100 dark:hover:bg-zinc-700"
       >
         {children}
@@ -133,7 +134,6 @@ export default function Personal() {
             Focused on creating intuitive and performant web experiences.
             Bridging the gap between design and development. OSS enthusiast.
           </p>
-          {/* view my resume */}
 
           <div className="flex flex-wrap gap-2">
             {TITLES.map((title) => (
@@ -145,6 +145,17 @@ export default function Personal() {
               </span>
             ))}
           </div>
+          {/* view resume */}
+          <Magnetic springOptions={{ bounce: 0 }} intensity={0.3}>
+            <Link
+              href="https://drive.google.com/file/d/14abONnro-MI3MX5umL_uwZdl5ULbLkPn/view?usp=sharing"
+              target="_blank"
+              className="group inline-flex items-center gap-2 rounded-full border border-zinc-200 bg-zinc-50 px-3 py-1 text-sm text-zinc-700 dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-300"
+            >
+              <span>View Resume</span>
+              <ArrowUpRightFromSquare className="h-4 w-4" />
+            </Link>
+          </Magnetic>
         </div>
       </motion.section>
 

@@ -142,7 +142,7 @@ export const SOCIAL_LINKS: SocialLink[] = [
   },
   {
     label: 'Resume',
-    link: 'https://www.canva.com/design/DAHCgLf1Slg/ywuY_yrZ-Oi47SMnW5ySsg/view?utm_content=DAHCgLf1Slg&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h6be0f94f4e',
+    link: 'https://drive.google.com/file/d/14abONnro-MI3MX5umL_uwZdl5ULbLkPn/view?usp=sharing',
   },
 ]
 
