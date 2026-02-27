@@ -122,6 +122,13 @@ export const BLOG_POSTS: BlogPost[] = [
     link: '/blog/my-first-npm-package',
     uid: 'blog-2',
   },
+  {
+    title: 'I Tried to Contribute to shadcn/ui — Here\'s What I Broke',
+    description:
+      'My first PR to a major OSS repo taught me more about contributing than any tutorial ever could.',
+    link: '/blog/i-tried-to-contribute-to-shadcn-ui',
+    uid: 'blog-3',
+  },
 ]
 
 export const SOCIAL_LINKS: SocialLink[] = [

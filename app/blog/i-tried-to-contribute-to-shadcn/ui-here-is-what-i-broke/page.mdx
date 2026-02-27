@@ -1,0 +1,81 @@
+export const metadata = {
+  title: "I Tried to Contribute to shadcn/ui — Here's What I Broke",
+  description:
+    'My first PR to a major OSS repo taught me more about contributing than any tutorial ever could.',
+  alternates: {
+    canonical: '/blog/i-tried-to-contribute-to-shadcn-ui',
+  },
+}
+
+# I Tried to Contribute to shadcn/ui — Here's What I Broke
+
+I wanted lmscn — my open-source component registry for interactive learning — to live inside the official shadcn/ui registry. Not just on its own domain. I wanted it in the main branch.
+
+So I opened a PR.
+
+And then I got an email from shadcn himself.
+
+---
+
+## The PR
+
+The change I needed to make was small. All I had to do was add a JSON object to a directory file inside the repo — one entry pointing to lmscn's registry. That's it. Simple enough that I felt confident going in.
+
+I cloned the repo, made the change, and then — because I'm a developer and developers like to make sure things work — I ran the build step. `pnpm build:registry`, somewhere under `packages/shadcn`. Seemed like the right thing to do. Verify your work.
+
+That was the mistake.
+
+---
+
+## The Email
+
+The next day, I got a notification:
+
+> *@SiphoChris It appears that there are some unintended file changes that have been committed?*
+> — shadcn
+
+I stared at that message for a moment.
+
+The build step I ran had regenerated files across the repo. Nothing critical was broken. But my PR now contained changes to files I had never touched, files I didn't even know existed before that moment. The diff was polluted. The PR was unusable.
+
+I replied honestly — explained what happened, offered to recreate the PR from scratch, said I didn't mind. Because I didn't. I just wanted to understand what I'd done wrong.
+
+---
+
+## What I Actually Learned
+
+The instinct to run a build step is a good instinct in your own project. In someone else's — especially one as widely used as shadcn/ui — it's the wrong move.
+
+Large OSS repositories that are touched by many contributors and depended on by many more have to be extraordinarily careful about what goes into the main branch. Every file that changes is a potential conflict, a potential regression, a potential surprise for someone downstream. The build artifacts those repos generate are owned by the repo's CI pipeline, not by individual contributors.
+
+When you contribute to a project like that, your job is surgical. You change exactly what you said you'd change, and nothing else. The diff should be boring. It should be obvious. It should not require explanation.
+
+I was thinking like someone working on their own codebase. I should have been thinking like a guest.
+
+---
+
+## What I'd Do Differently
+
+Before opening a PR on any large OSS repo now, I ask myself a few things:
+
+**What is the minimum change that achieves what I want?** Not what seems complete. Not what feels thorough. The minimum. If the PR description can't be summarised in one sentence, it's probably too big.
+
+**Have I read the contributing guide?** Actually read it, not skimmed it. Large repos document their conventions for a reason, and the build step situation could have been avoided entirely if I'd understood what `pnpm build:registry` actually does and who is supposed to run it.
+
+**Is my diff clean?** Before pushing, look at what you're actually committing. `git diff`. Read it. If there's anything in there you didn't put there intentionally, figure out why before it becomes someone else's problem to explain to you.
+
+---
+
+## A Note on Getting a Response at All
+
+Here's the thing I haven't said yet: shadcn responded. Personally.
+
+That's not guaranteed. Most maintainers of projects that size are fielding dozens of issues and PRs at any given time. The fact that he caught the unintended changes, flagged them directly, and gave me a path forward was genuinely more than I was owed.
+
+OSS maintainers are doing real work, usually unpaid or undercompensated, and their time is finite. The best thing a contributor can do — especially a first-time contributor — is make that time cost as little as possible. Clean PRs, clear descriptions, honest communication when something goes wrong.
+
+I'll be going back with a cleaner PR. I know exactly what to change now, and exactly what not to touch.
+
+---
+
+lmscn is live at [lmscn.vercel.app](https://lmscn.vercel.app) — production-ready interactive learning components built on shadcn/ui. The contribution to the main registry is still coming. Just more carefully this time.
