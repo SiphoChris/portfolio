@@ -34,9 +34,8 @@ type SkillCategory = {
 
 export const TITLES: string[] = [
   'Full Stack Developer',
-  'Frontend Engineer',
-  'Backend Developer',
   'OSS Contributor',
+  '[Reactjs & Nodejs ecosystem]',
 ]
 
 export const SKILL_CATEGORIES: SkillCategory[] = [
@@ -47,8 +46,8 @@ export const SKILL_CATEGORIES: SkillCategory[] = [
       'Next.js',
       'JavaScript',
       'TypeScript',
-      'Tailwind CSS',
       'Astro',
+      'Tanstack Start',
       'TailwindCSS',
     ],
   },
@@ -67,8 +66,12 @@ export const SKILL_CATEGORIES: SkillCategory[] = [
   },
   {
     name: 'Tooling & Infra',
-    skills: ['Git', 'Vercel', 'Docker', 'GitHub Actions', 'Cloudflare'],
+    skills: ['Git', 'Vercel', 'Docker', 'GitHub Actions', 'Cloudflare', 'Linux'],
   },
+  {
+    "name": "CMS & Design",
+    "skills": ["Strapi", "WordPress", "Figma", "Canva", "shadcn/ui"]
+  }
 ]
 
 export const PROJECTS: Project[] = [
