@@ -90,9 +90,9 @@ function MagneticSocialLink({
 }) {
   return (
     <Magnetic springOptions={{ bounce: 0 }} intensity={0.3}>
-      <a
+      <Link
         href={link}
-        className="group relative inline-flex shrink-0 items-center gap-[1px] rounded-full bg-zinc-100 px-2.5 py-1 text-sm text-black transition-colors duration-200 hover:bg-zinc-950 hover:text-zinc-50 dark:bg-zinc-800 dark:text-zinc-100 dark:hover:bg-zinc-700"
+        className="group relative inline-flex shrink-0 items-center gap-2 rounded-full bg-zinc-100 px-2.5 py-1 text-sm text-black transition-colors duration-200 hover:bg-zinc-950 hover:text-zinc-50 dark:bg-zinc-800 dark:text-zinc-100 dark:hover:bg-zinc-700"
       >
         {children}
         <svg
@@ -110,7 +110,7 @@ function MagneticSocialLink({
             clipRule="evenodd"
           ></path>
         </svg>
-      </a>
+      </Link>
     </Magnetic>
   )
 }
@@ -133,6 +133,8 @@ export default function Personal() {
             Focused on creating intuitive and performant web experiences.
             Bridging the gap between design and development. OSS enthusiast.
           </p>
+          {/* view my resume */}
+
           <div className="flex flex-wrap gap-2">
             {TITLES.map((title) => (
               <span
@@ -186,7 +188,7 @@ export default function Personal() {
                 <ProjectImage src={project.image} />
               </div>
               <div className="px-1">
-                <a
+                <Link
                   className="font-base group relative inline-flex items-center gap-1 font-[450] text-zinc-900 dark:text-zinc-50"
                   href={project.link}
                   target="_blank"
@@ -196,7 +198,7 @@ export default function Personal() {
                     <span className="absolute bottom-0.5 left-0 block h-[1px] w-full max-w-0 bg-zinc-900 dark:bg-zinc-50 transition-all duration-200 group-hover:max-w-full"></span>
                   </span>
                   <ExternalLink className="h-3.5 w-3.5 text-zinc-400 dark:text-zinc-500 transition-colors duration-200 group-hover:text-zinc-900 dark:group-hover:text-zinc-50" />
-                </a>
+                </Link>
                 <p className="text-base text-zinc-600 dark:text-zinc-400">
                   {project.description}
                 </p>
@@ -214,7 +216,7 @@ export default function Personal() {
         <h3 className="mb-5 text-lg font-medium">Work Experience</h3>
         <div className="flex flex-col space-y-2">
           {WORK_EXPERIENCE.map((job) => (
-            <a
+            <Link
               className="relative overflow-hidden rounded-2xl bg-zinc-300/30 p-[1px] dark:bg-zinc-600/30"
               href={job.link}
               target="_blank"
@@ -240,7 +242,7 @@ export default function Personal() {
                   </p>
                 </div>
               </div>
-            </a>
+            </Link>
           ))}
         </div>
       </motion.section>
@@ -290,9 +292,9 @@ export default function Personal() {
         <h3 className="mb-5 text-lg font-medium">Connect</h3>
         <p className="mb-5 text-zinc-600 dark:text-zinc-400">
           Feel free to contact me at{' '}
-          <a className="underline dark:text-zinc-300" href={`mailto:${EMAIL}`}>
+          <Link className="underline dark:text-zinc-300" href={`mailto:${EMAIL}`}>
             {EMAIL}
-          </a>
+          </Link>
         </p>
         <div className="flex items-center justify-start space-x-3">
           {SOCIAL_LINKS.map((link) => (

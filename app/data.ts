@@ -140,6 +140,10 @@ export const SOCIAL_LINKS: SocialLink[] = [
     label: 'LinkedIn',
     link: 'https://www.linkedin.com/in/sipho-nkebe-979783312/',
   },
+  {
+    label: 'Resume',
+    link: 'https://www.canva.com/design/DAHCgLf1Slg/ywuY_yrZ-Oi47SMnW5ySsg/view?utm_content=DAHCgLf1Slg&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h6be0f94f4e',
+  },
 ]
 
 export const EMAIL = 'siphonkebe@gmail.com'
