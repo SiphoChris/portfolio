@@ -97,12 +97,20 @@ export const PROJECTS: Project[] = [
 
 export const WORK_EXPERIENCE: WorkExperience[] = [
   {
+    company: 'WeThinkCode_',
+    title: 'Peer Technical Tutor',
+    start: '2025',
+    end: 'Present',
+    link: 'https://wethinkcode.co.za/',
+    id: 'work1',
+  },
+  {
     company: 'LC Studio',
     title: 'Full Stack Developer',
     start: '2024',
     end: '2025',
     link: 'https://lcstudio.co.za/',
-    id: 'work1',
+    id: 'work2',
   },
 ]
 
