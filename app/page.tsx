@@ -186,39 +186,6 @@ export default function Personal() {
         </div>
       </motion.section>
 
-      {/* Projects */}
-      <motion.section
-        variants={VARIANTS_SECTION}
-        transition={TRANSITION_SECTION}
-      >
-        <h3 className="mb-5 text-lg font-medium">Selected Projects</h3>
-        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
-          {PROJECTS.map((project) => (
-            <div key={project.name} className="space-y-2">
-              <div className="relative rounded-2xl bg-zinc-50/40 p-1 ring-1 ring-zinc-200/50 ring-inset dark:bg-zinc-950/40 dark:ring-zinc-800/50">
-                <ProjectImage src={project.image} />
-              </div>
-              <div className="px-1">
-                <Link
-                  className="font-base group relative inline-flex items-center gap-1 font-[450] text-zinc-900 dark:text-zinc-50"
-                  href={project.link}
-                  target="_blank"
-                >
-                  <span className="relative">
-                    {project.name}
-                    <span className="absolute bottom-0.5 left-0 block h-[1px] w-full max-w-0 bg-zinc-900 dark:bg-zinc-50 transition-all duration-200 group-hover:max-w-full"></span>
-                  </span>
-                  <ExternalLink className="h-3.5 w-3.5 text-zinc-400 dark:text-zinc-500 transition-colors duration-200 group-hover:text-zinc-900 dark:group-hover:text-zinc-50" />
-                </Link>
-                <p className="text-base text-zinc-600 dark:text-zinc-400">
-                  {project.description}
-                </p>
-              </div>
-            </div>
-          ))}
-        </div>
-      </motion.section>
-
       {/* Work Experience */}
       <motion.section
         variants={VARIANTS_SECTION}
@@ -228,7 +195,7 @@ export default function Personal() {
         <div className="flex flex-col space-y-2">
           {WORK_EXPERIENCE.map((job) => (
             <Link
-              className="relative overflow-hidden rounded-2xl bg-zinc-300/30 p-[1px] dark:bg-zinc-600/30"
+              className="relative overflow-hidden rounded-2xl bg-zinc-300/30 p-px dark:bg-zinc-600/30"
               href={job.link}
               target="_blank"
               rel="noopener noreferrer"
@@ -254,6 +221,39 @@ export default function Personal() {
                 </div>
               </div>
             </Link>
+          ))}
+        </div>
+      </motion.section>
+
+      {/* Projects */}
+      <motion.section
+        variants={VARIANTS_SECTION}
+        transition={TRANSITION_SECTION}
+      >
+        <h3 className="mb-5 text-lg font-medium">Selected Projects</h3>
+        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
+          {PROJECTS.map((project) => (
+            <div key={project.name} className="space-y-2">
+              <div className="relative rounded-2xl bg-zinc-50/40 p-1 ring-1 ring-zinc-200/50 ring-inset dark:bg-zinc-950/40 dark:ring-zinc-800/50">
+                <ProjectImage src={project.image} />
+              </div>
+              <div className="px-1">
+                <Link
+                  className="font-base group relative inline-flex items-center gap-1 font-[450] text-zinc-900 dark:text-zinc-50"
+                  href={project.link}
+                  target="_blank"
+                >
+                  <span className="relative">
+                    {project.name}
+                    <span className="absolute bottom-0.5 left-0 block h-px w-full max-w-0 bg-zinc-900 dark:bg-zinc-50 transition-all duration-200 group-hover:max-w-full"></span>
+                  </span>
+                  <ExternalLink className="h-3.5 w-3.5 text-zinc-400 dark:text-zinc-500 transition-colors duration-200 group-hover:text-zinc-900 dark:group-hover:text-zinc-50" />
+                </Link>
+                <p className="text-base text-zinc-600 dark:text-zinc-400">
+                  {project.description}
+                </p>
+              </div>
+            </div>
           ))}
         </div>
       </motion.section>
