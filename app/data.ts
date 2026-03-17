@@ -93,6 +93,15 @@ export const PROJECTS: Project[] = [
       'https://res.cloudinary.com/dfjfdrloj/image/upload/v1772112744/lmscn-portfolio_hlrasb.png',
     id: 'project2',
   },
+  {
+    name: 'howdoi (how do I)',
+    description:
+      'Unix/Linux knowledge base for howdoi — file management, text processing, and more.',
+    link: 'https://www.npmjs.com/package/@howdoi-cli/cli',
+    image:
+      'https://res.cloudinary.com/dfjfdrloj/image/upload/v1773734168/howdoi-cli_w3n4fi.png',
+    id: 'project3',
+  },
 ]
 
 export const WORK_EXPERIENCE: WorkExperience[] = [
@@ -150,7 +159,7 @@ export const SOCIAL_LINKS: SocialLink[] = [
   },
   {
     label: 'Resume',
-    link: 'https://drive.google.com/file/d/14abONnro-MI3MX5umL_uwZdl5ULbLkPn/view?usp=sharing',
+    link: 'https://drive.google.com/file/d/1dAWog8eb6bcV_uG5-PwmQfyrshIWfJr3/view?usp=sharing',
   },
 ]
 
