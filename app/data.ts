@@ -159,7 +159,7 @@ export const SOCIAL_LINKS: SocialLink[] = [
   },
   {
     label: 'Resume',
-    link: 'https://drive.google.com/file/d/1dAWog8eb6bcV_uG5-PwmQfyrshIWfJr3/view?usp=sharing',
+    link: 'https://drive.google.com/file/d/1CT7oVCsG1XsDV9-CQ5rlLsxEgJGoY6xH/view?usp=sharing',
   },
 ]
 
