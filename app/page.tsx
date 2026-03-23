@@ -148,7 +148,7 @@ export default function Personal() {
           {/* view resume */}
           <Magnetic springOptions={{ bounce: 0 }} intensity={0.3}>
             <Link
-              href="https://drive.google.com/file/d/1CT7oVCsG1XsDV9-CQ5rlLsxEgJGoY6xH/view?usp=sharing"
+              href="https://drive.google.com/file/d/1ZrTX_1gdBde0oAfcXOEWculjLGnyfrxh/view?usp=sharing"
               target="_blank"
               className="group inline-flex items-center gap-2 rounded-full border border-zinc-200 bg-zinc-50 px-3 py-1 text-sm text-zinc-700 dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-300"
             >
