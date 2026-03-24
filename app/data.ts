@@ -156,10 +156,15 @@ export const SOCIAL_LINKS: SocialLink[] = [
   {
     label: 'LinkedIn',
     link: 'https://www.linkedin.com/in/sipho-nkebe-979783312/',
-  },
+  }, 
   {
     label: 'Resume',
     link: 'https://drive.google.com/file/d/1ZrTX_1gdBde0oAfcXOEWculjLGnyfrxh/view?usp=sharing',
+  },
+  ,
+  {
+    label: 'npm',
+    link: 'https://www.npmjs.com/~siphonkebe',
   },
 ]
 
