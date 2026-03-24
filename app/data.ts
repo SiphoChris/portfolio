@@ -161,7 +161,6 @@ export const SOCIAL_LINKS: SocialLink[] = [
     label: 'Resume',
     link: 'https://drive.google.com/file/d/1ZrTX_1gdBde0oAfcXOEWculjLGnyfrxh/view?usp=sharing',
   },
-  ,
   {
     label: 'npm',
     link: 'https://www.npmjs.com/~siphonkebe',
