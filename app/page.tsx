@@ -20,6 +20,7 @@ import {
   SOCIAL_LINKS,
   TITLES,
   SKILL_CATEGORIES,
+  RESOURCES,
 } from './data'
 
 const VARIANTS_CONTAINER = {
@@ -92,7 +93,7 @@ function MagneticSocialLink({
     <Magnetic springOptions={{ bounce: 0 }} intensity={0.3}>
       <Link
         href={link}
-        target='_blank'
+        target="_blank"
         className="group relative inline-flex shrink-0 items-center gap-2 rounded-full bg-zinc-100 px-2.5 py-1 text-sm text-black transition-colors duration-200 hover:bg-zinc-950 hover:text-zinc-50 dark:bg-zinc-800 dark:text-zinc-100 dark:hover:bg-zinc-700"
       >
         {children}
@@ -167,7 +168,10 @@ export default function Personal() {
         <h3 className="mb-5 text-lg font-medium">Skills</h3>
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
           {SKILL_CATEGORIES.map((category) => (
-            <div key={category.name} className="rounded-2xl border border-zinc-200/60 bg-zinc-50/40 p-4 dark:border-zinc-800/60 dark:bg-zinc-950/40">
+            <div
+              key={category.name}
+              className="rounded-2xl border border-zinc-200/60 bg-zinc-50/40 p-4 dark:border-zinc-800/60 dark:bg-zinc-950/40"
+            >
               <h4 className="mb-3 text-sm font-medium text-zinc-500 dark:text-zinc-400">
                 {category.name}
               </h4>
@@ -245,14 +249,47 @@ export default function Personal() {
                 >
                   <span className="relative">
                     {project.name}
-                    <span className="absolute bottom-0.5 left-0 block h-px w-full max-w-0 bg-zinc-900 dark:bg-zinc-50 transition-all duration-200 group-hover:max-w-full"></span>
+                    <span className="absolute bottom-0.5 left-0 block h-px w-full max-w-0 bg-zinc-900 transition-all duration-200 group-hover:max-w-full dark:bg-zinc-50"></span>
                   </span>
-                  <ExternalLink className="h-3.5 w-3.5 text-zinc-400 dark:text-zinc-500 transition-colors duration-200 group-hover:text-zinc-900 dark:group-hover:text-zinc-50" />
+                  <ExternalLink className="h-3.5 w-3.5 text-zinc-400 transition-colors duration-200 group-hover:text-zinc-900 dark:text-zinc-500 dark:group-hover:text-zinc-50" />
                 </Link>
                 <p className="text-base text-zinc-600 dark:text-zinc-400">
                   {project.description}
                 </p>
               </div>
+            </div>
+          ))}
+        </div>
+      </motion.section>
+
+      {/* Resources */}
+      <motion.section
+        variants={VARIANTS_SECTION}
+        transition={TRANSITION_SECTION}
+        aria-labelledby="resources-heading"
+      >
+        <h3 id="resources-heading" className="mb-5 text-lg font-medium">
+          Resources
+        </h3>
+
+        <div className="grid grid-cols-1 gap-4 rounded-2xl border border-zinc-200/60 bg-zinc-50/40 p-4 sm:grid-cols-2 md:grid-cols-3 dark:border-zinc-800/60 dark:bg-zinc-950/40">
+          {RESOURCES.map((resource) => (
+            <div
+              key={resource.name}
+              className="flex items-center justify-between gap-4 rounded-lg bg-zinc-100/50 px-4 py-2 text-sm text-zinc-800 dark:bg-zinc-800/50 dark:text-zinc-200"
+            >
+              <Link
+                href={resource.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="rounded font-medium hover:underline focus:ring-2 focus:ring-zinc-400 focus:outline-none"
+              >
+                {resource.name}
+              </Link>
+
+              <span className="text-xs text-zinc-600 dark:text-zinc-300 border border-zinc-300 dark:border-zinc-700 bg-zinc-200 dark:bg-zinc-800 px-2 py-0.5 rounded-full">
+  {resource.category}
+</span>
             </div>
           ))}
         </div>
@@ -303,7 +340,10 @@ export default function Personal() {
         <h3 className="mb-5 text-lg font-medium">Connect</h3>
         <p className="mb-5 text-zinc-600 dark:text-zinc-400">
           Feel free to contact me at{' '}
-          <Link className="underline dark:text-zinc-300" href={`mailto:${EMAIL}`}>
+          <Link
+            className="underline dark:text-zinc-300"
+            href={`mailto:${EMAIL}`}
+          >
             {EMAIL}
           </Link>
         </p>

@@ -22,6 +22,13 @@ type BlogPost = {
   uid: string
 }
 
+type Resources = {
+  name: string
+  link: string,
+  category: string,
+  domain: string,
+}
+
 type SocialLink = {
   label: string
   link: string
@@ -66,12 +73,19 @@ export const SKILL_CATEGORIES: SkillCategory[] = [
   },
   {
     name: 'Tooling & Infra',
-    skills: ['Git', 'Vercel', 'Docker', 'GitHub Actions', 'Cloudflare', 'Linux'],
+    skills: [
+      'Git',
+      'Vercel',
+      'Docker',
+      'GitHub Actions',
+      'Cloudflare',
+      'Linux',
+    ],
   },
   {
-    "name": "CMS & Design",
-    "skills": ["Strapi", "WordPress", "Figma", "Canva", "shadcn/ui"]
-  }
+    name: 'CMS & Design',
+    skills: ['Strapi', 'WordPress', 'Figma', 'Canva', 'shadcn/ui'],
+  },
 ]
 
 export const PROJECTS: Project[] = [
@@ -123,6 +137,15 @@ export const WORK_EXPERIENCE: WorkExperience[] = [
   },
 ]
 
+export const RESOURCES: Resources[] = [
+  {
+    name: 'Testing Cookbook',
+    link: 'https://drive.google.com/file/d/11UiJeuy2yQ6ahKY6uHcbzCWWdk29iR4h/view?usp=drive_link',
+    category: "book",
+    domain: "testing",
+  },
+]
+
 export const BLOG_POSTS: BlogPost[] = [
   {
     title:
@@ -140,7 +163,7 @@ export const BLOG_POSTS: BlogPost[] = [
     uid: 'blog-2',
   },
   {
-    title: 'I Tried to Contribute to shadcn/ui — Here\'s What I Broke',
+    title: "I Tried to Contribute to shadcn/ui — Here's What I Broke",
     description:
       'My first PR to a major OSS repo taught me more about contributing than any tutorial ever could.',
     link: '/blog/i-tried-to-contribute-to-shadcn-ui',
@@ -156,7 +179,7 @@ export const SOCIAL_LINKS: SocialLink[] = [
   {
     label: 'LinkedIn',
     link: 'https://www.linkedin.com/in/sipho-nkebe-979783312/',
-  }, 
+  },
   {
     label: 'Resume',
     link: 'https://drive.google.com/file/d/1ZrTX_1gdBde0oAfcXOEWculjLGnyfrxh/view?usp=sharing',
