@@ -243,7 +243,7 @@ export default function Personal() {
               </div>
               <div className="px-1">
                 <Link
-                  className="font-base group relative inline-flex items-center gap-1 font-[450] text-zinc-900 dark:text-zinc-50"
+                  className="font-base group relative inline-flex items-center gap-1.5 font-[450] text-zinc-900 dark:text-zinc-50"
                   href={project.link}
                   target="_blank"
                 >
@@ -256,7 +256,15 @@ export default function Personal() {
                 <p className="text-base text-zinc-600 dark:text-zinc-400">
                   {project.description}
                 </p>
-              </div>
+                  <Link
+                  href={project.github}
+                  target="_blank"
+                  className="inline-flex items-center gap-1.5 text-sm text-zinc-500 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-50"
+                >
+                  <span>GitHub</span>
+                  <ExternalLink className="h-3 w-3" />
+                </Link>
+                </div>
             </div>
           ))}
         </div>
@@ -287,9 +295,9 @@ export default function Personal() {
                 {resource.name}
               </Link>
 
-              <span className="text-xs text-zinc-600 dark:text-zinc-300 border border-zinc-300 dark:border-zinc-700 bg-zinc-200 dark:bg-zinc-800 px-2 py-0.5 rounded-full">
-  {resource.category}
-</span>
+              <span className="rounded-full border border-zinc-300 bg-zinc-200 px-2 py-0.5 text-xs text-zinc-600 dark:border-zinc-700 dark:bg-zinc-800 dark:text-zinc-300">
+                {resource.category}
+              </span>
             </div>
           ))}
         </div>

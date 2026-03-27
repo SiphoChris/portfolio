@@ -2,6 +2,7 @@ type Project = {
   name: string
   description: string
   link: string
+  github: string
   image: string
   id: string
 }
@@ -90,6 +91,16 @@ export const SKILL_CATEGORIES: SkillCategory[] = [
 
 export const PROJECTS: Project[] = [
   {
+    name: 'Metrorail Website',
+    description:
+      'A metrorail website to find schedules, routes, and ticketing information for South African commuters.',
+    link: 'https://metrorail-website.siphonkebe.workers.dev/',
+    image:
+      'https://res.cloudinary.com/dfjfdrloj/image/upload/v1774612708/metrorail_nrmlhm.png',
+    id: 'project0',
+    github: 'https://github.com/SiphoChris/metrorail-website',
+  },
+  {
     name: 'South African ID',
     description:
       'OSS package for validating; extracting; and validating South African ID numbers.',
@@ -97,6 +108,7 @@ export const PROJECTS: Project[] = [
     image:
       'https://res.cloudinary.com/dfjfdrloj/image/upload/v1772112746/sa-id-portfolio_tdyfjc.png',
     id: 'project1',
+    github: 'https://github.com/SiphoChris/south-african-id',
   },
   {
     name: 'lmscn (a shadcn/ui registry)',
@@ -106,6 +118,7 @@ export const PROJECTS: Project[] = [
     image:
       'https://res.cloudinary.com/dfjfdrloj/image/upload/v1772112744/lmscn-portfolio_hlrasb.png',
     id: 'project2',
+    github: 'https://github.com/SiphoChris/lmscn',
   },
   {
     name: 'howdoi (how do I)',
@@ -115,6 +128,7 @@ export const PROJECTS: Project[] = [
     image:
       'https://res.cloudinary.com/dfjfdrloj/image/upload/v1773734168/howdoi-cli_w3n4fi.png',
     id: 'project3',
+    github: 'https://github.com/SiphoChris/howdoi-cli',
   },
 ]
 
@@ -141,7 +155,7 @@ export const RESOURCES: Resources[] = [
   {
     name: 'Testing Cookbook',
     link: 'https://drive.google.com/file/d/11UiJeuy2yQ6ahKY6uHcbzCWWdk29iR4h/view?usp=drive_link',
-    category: "book",
+    category: "guide",
     domain: "testing",
   },
 ]
