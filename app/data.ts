@@ -51,10 +51,10 @@ export const SKILL_CATEGORIES: SkillCategory[] = [
     name: 'Frontend',
     skills: [
       'React',
-      'Next.js',
       'JavaScript',
       'TypeScript',
       'Astro',
+      'Next.js',
       'Tanstack Start',
       'TailwindCSS',
     ],
@@ -86,6 +86,10 @@ export const SKILL_CATEGORIES: SkillCategory[] = [
   {
     name: 'CMS & Design',
     skills: ['Strapi', 'WordPress', 'Figma', 'Canva', 'shadcn/ui'],
+  },
+  {
+    name: 'Testing',
+    skills: ['Vitest', 'Playwright', 'pytest', 'unittest', 'postman'],
   },
 ]
 
