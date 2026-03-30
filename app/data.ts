@@ -48,15 +48,26 @@ export const TITLES: string[] = [
 
 export const SKILL_CATEGORIES: SkillCategory[] = [
   {
+    name: 'Core Languages',
+    skills: [
+      'JavaScript',
+      'TypeScript',
+      'Java',
+      'Python',
+      'SQL',
+      'HTML',
+      'CSS'
+    ],
+  },
+  {
     name: 'Frontend',
     skills: [
       'React',
-      'JavaScript',
-      'TypeScript',
       'Astro',
       'Next.js',
       'Tanstack Start',
       'TailwindCSS',
+      'shadcn/ui'
     ],
   },
   {
@@ -85,7 +96,7 @@ export const SKILL_CATEGORIES: SkillCategory[] = [
   },
   {
     name: 'CMS & Design',
-    skills: ['Strapi', 'WordPress', 'Figma', 'Canva', 'shadcn/ui'],
+    skills: ['Strapi', 'WordPress', 'Figma', 'Canva'],
   },
   {
     name: 'Testing',
