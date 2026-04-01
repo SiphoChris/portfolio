@@ -177,19 +177,11 @@ export const RESOURCES: Resources[] = [
 
 export const BLOG_POSTS: BlogPost[] = [
   {
-    title:
-      "I Built an Open-Source Component Registry for Interactive Learning — Here's Why",
+    title: "Testing Cookbook: e2e testing with Playwright",
     description:
-      'Before building my edtech project, I needed the primitives. So I built them for everyone.',
-    link: '/blog/i-built-an-open-source-component-registry-for-interactive-learning',
-    uid: 'blog-1',
-  },
-  {
-    title: 'My First npm Package — What Nobody Tells You About Publishing OSS',
-    description:
-      'A look back at building and publishing @south-african/id — my first npm package, what broke, what I learned, and why I claimed an entire npm org.',
-    link: '/blog/my-first-npm-package',
-    uid: 'blog-2',
+      'Testing felt like a chore until I sat down to actually teach it. Writing The Testing Cookbook changed how I think about quality.',
+    link: '/blog/i-wrote-a-testing-guide',
+    uid: 'blog-4',
   },
   {
     title: "I Tried to Contribute to shadcn/ui — Here's What I Broke",
@@ -199,11 +191,19 @@ export const BLOG_POSTS: BlogPost[] = [
     uid: 'blog-3',
   },
   {
-    title: "Testing Cookbook: e2e testing with Playwright",
+    title: 'My First npm Package — What Nobody Tells You About Publishing OSS',
     description:
-      'Testing felt like a chore until I sat down to actually teach it. Writing The Testing Cookbook changed how I think about quality.',
-    link: '/blog/i-wrote-a-testing-guide',
-    uid: 'blog-4',
+      'A look back at building and publishing @south-african/id — my first npm package, what broke, what I learned, and why I claimed an entire npm org.',
+    link: '/blog/my-first-npm-package',
+    uid: 'blog-2',
+  },
+  {
+    title:
+      "I Built an Open-Source Component Registry for Interactive Learning — Here's Why",
+    description:
+      'Before building my edtech project, I needed the primitives. So I built them for everyone.',
+    link: '/blog/i-built-an-open-source-component-registry-for-interactive-learning',
+    uid: 'blog-1',
   },
 ]
 
