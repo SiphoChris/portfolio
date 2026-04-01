@@ -1,0 +1,82 @@
+export const metadata = {
+  title: "I Wrote a Testing Guide — Here's Why I Think Every Developer Should",
+  description:
+    'Testing felt like a chore until I sat down to actually teach it. Writing The Testing Cookbook changed how I think about quality.',
+  alternates: {
+    canonical: '/blog/i-wrote-a-testing-guide',
+  },
+}
+
+# I Wrote a Testing Guide — Here's Why I Think Every Developer Should
+
+I'll be honest — testing was the part of development I kept pushing to the side.
+
+Not because I thought it was unimportant. I knew it was important. I'd read enough post-mortems and seen enough bugs in production to understand the argument. But there's a difference between knowing something matters and actually building the habit around it.
+
+So I did something that forced the habit: I wrote a guide.
+
+The result is **The Testing Cookbook** — a practical, end-to-end reference for writing tests that matter, with Playwright as the main tool.
+
+---
+
+## Why a Cookbook
+
+The name isn't accidental. A cookbook doesn't teach you food science — it gives you recipes. You follow them, they work, and over time you start to understand *why* they work and when to deviate.
+
+That's what I wanted for testing. Not a deep theoretical treatment of test philosophy, but something you can open on one screen while your code is on the other. Something that gives you the vocabulary, the patterns, and enough real examples to get unstuck.
+
+The guide is structured in four parts:
+
+**Part 1 — Foundations** covers the why before the how. The cost argument for testing. The testing pyramid. The difference between unit, integration, and E2E tests. The tools worth knowing. If you've never thought seriously about test strategy before, this is where to start.
+
+**Part 2 — Writing Good Tests** is the part I wish had existed when I was starting out. It covers the vocabulary — test cases, suites, fixtures, flaky tests, false positives — and then gets into the patterns that make tests maintainable: the AAA pattern, stable selectors, the Page Object Model.
+
+**Part 3 — Playwright in Practice** is the hands-on section. Setup, scripts, the Core API, and a full breakdown of how to mock API responses using Playwright's route interception. This is where it gets concrete.
+
+**Part 4 — Raising the Bar** covers the things that separate tests that survive from tests that become a maintenance burden: best practices, boundary testing, parameterised tests, and how to handle async properly without reaching for `waitForTimeout`.
+
+---
+
+## The Thing About Edge Cases
+
+One of my favourite sections to write was the edge cases chapter.
+
+The happy path is easy to test. User logs in, sees their dashboard, everything works. That test is almost not worth writing — the real question is what happens when things go wrong.
+
+What happens when the API is down? When the session expires mid-checkout? When someone pastes 10,000 characters into your search field? When a user clicks Submit twice in quick succession?
+
+These aren't exotic scenarios. They happen. And the teams that catch them in CI rather than in production are the ones that wrote the test for it first.
+
+Writing them out in a structured way made me realise how many of these I'd personally shipped past, and how many of them have a one-liner Playwright mock as the answer.
+
+---
+
+## What Writing It Taught Me
+
+There's a specific kind of clarity that comes from trying to explain something to someone else.
+
+When I was writing the section on mocking, I had to ask myself: *why* do we mock? Not just when — the actual reason. And the answer turned out to be more nuanced than "so you don't hit the real API". It's about determinism. It's about testing the behaviour of *your* code in a specific condition, rather than the reliability of an external system you don't control. Once I wrote that down, the when and how of mocking became obvious.
+
+Same with the testing pyramid. I'd heard the metaphor many times. But explaining *why the shape matters* — that unit tests are cheap and E2E tests are expensive and your investment ratio should reflect that — made it stick in a way it hadn't before.
+
+Teaching is a form of learning. That's not a new idea, but sitting down to write this guide made it real for me.
+
+---
+
+## Who It's For
+
+The guide is aimed at developers who are past the "what is JavaScript" stage but haven't yet built a serious testing practice. If you've shipped something real, know your way around a codebase, but find yourself skipping tests or writing them after the fact and not really trusting them — this is for you.
+
+It's also useful if you're onboarding someone onto a project and want a shared vocabulary and set of patterns to reference. The glossary chapter alone — test case, test suite, fixture, flaky test, false positive — is worth having available.
+
+---
+
+## Get the Guide
+
+The Testing Cookbook is available now.
+
+📄 [Download the PDF](https://drive.google.com/file/d/11UiJeuy2yQ6ahKY6uHcbzCWWdk29iR4h/view)
+
+It covers: foundations and testing strategy · the testing pyramid · types and domains · popular tools · the AAA pattern · stable selectors · the Page Object Model · common edge cases · Playwright setup and core API · mocking with `page.route()` · best practices · boundary testing · parameterised tests · async patterns.
+
+If you're working on a project that doesn't have tests yet, this is the place to start. And if it does — there's probably a chapter in here that will make them better.

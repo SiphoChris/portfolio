@@ -198,6 +198,13 @@ export const BLOG_POSTS: BlogPost[] = [
     link: '/blog/i-tried-to-contribute-to-shadcn-ui',
     uid: 'blog-3',
   },
+  {
+    title: "Testing Cookbook: e2e testing with Playwright",
+    description:
+      'Testing felt like a chore until I sat down to actually teach it. Writing The Testing Cookbook changed how I think about quality.',
+    link: '/blog/i-wrote-a-testing-guide',
+    uid: 'blog-4',
+  },
 ]
 
 export const SOCIAL_LINKS: SocialLink[] = [
