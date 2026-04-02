@@ -106,13 +106,23 @@ export const SKILL_CATEGORIES: SkillCategory[] = [
 
 export const PROJECTS: Project[] = [
   {
+    name: 'supacommerce',
+    description:
+      'A modern headless e-commerce solution built with on Supabase that you drop into your project and make it your own.',
+    link: 'https://supacommerce-docs.vercel.app/',
+    image:
+      'https://res.cloudinary.com/dfjfdrloj/image/upload/v1775126365/supacommerce_z3ozht.png',
+    id: 'project0',
+    github: 'https://github.com/SiphoChris/supacommerce',
+  },
+  {
     name: 'Metrorail Website',
     description:
       'A metrorail website to find schedules, routes, and ticketing information for South African commuters.',
     link: 'https://metrorail-website.siphonkebe.workers.dev/',
     image:
       'https://res.cloudinary.com/dfjfdrloj/image/upload/v1774612708/metrorail_nrmlhm.png',
-    id: 'project0',
+    id: 'project1',
     github: 'https://github.com/SiphoChris/metrorail-website',
   },
   {
@@ -122,7 +132,7 @@ export const PROJECTS: Project[] = [
     link: 'https://www.npmjs.com/package/@south-african/id',
     image:
       'https://res.cloudinary.com/dfjfdrloj/image/upload/v1772112746/sa-id-portfolio_tdyfjc.png',
-    id: 'project1',
+    id: 'project2',
     github: 'https://github.com/SiphoChris/south-african-id',
   },
   {
@@ -132,7 +142,7 @@ export const PROJECTS: Project[] = [
     link: 'https://lmscn.vercel.app/',
     image:
       'https://res.cloudinary.com/dfjfdrloj/image/upload/v1772112744/lmscn-portfolio_hlrasb.png',
-    id: 'project2',
+    id: 'project3',
     github: 'https://github.com/SiphoChris/lmscn',
   },
   {
@@ -142,7 +152,7 @@ export const PROJECTS: Project[] = [
     link: 'https://www.npmjs.com/package/@howdoi-cli/cli',
     image:
       'https://res.cloudinary.com/dfjfdrloj/image/upload/v1773734168/howdoi-cli_w3n4fi.png',
-    id: 'project3',
+    id: 'project4',
     github: 'https://github.com/SiphoChris/howdoi-cli',
   },
 ]
