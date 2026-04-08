@@ -183,7 +183,14 @@ export const RESOURCES: Resources[] = [
     category: "guide",
     domain: "testing",
   },
+  {
+    name: 'RESTful API Cookbook',
+    link: 'https://drive.google.com/file/d/1u60im5foKk93vlhN_y5YdhbBABAypxTU/view?usp=sharing',
+    category: "guide",
+    domain: "backend",
+  },
 ]
+
 
 export const BLOG_POSTS: BlogPost[] = [
   {
