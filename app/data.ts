@@ -228,7 +228,7 @@ export const SOCIAL_LINKS: SocialLink[] = [
   },
   {
     label: 'Resume',
-    link: 'https://drive.google.com/file/d/1DCgVvkk0NCHL_lJSnmjjTAIK0VtUnkJC/view?usp=sharing',
+    link: 'https://drive.google.com/file/d/1-dEX2Fl2sLupFUxi9et93PKgZZwMtK18/view?usp=sharing',
   },
   {
     label: 'npm',
