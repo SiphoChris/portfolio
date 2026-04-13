@@ -75,6 +75,7 @@ export const SKILL_CATEGORIES: SkillCategory[] = [
     skills: [
       'Node.js',
       'Express',
+      'Drizzle ORM',
       'Prisma',
       'PostgreSQL',
       'MySQL',
