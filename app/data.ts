@@ -52,6 +52,7 @@ export const SKILL_CATEGORIES: SkillCategory[] = [
     skills: [
       'JavaScript',
       'TypeScript',
+      'Dart',
       'Java',
       'Python',
       'SQL',
@@ -63,10 +64,11 @@ export const SKILL_CATEGORIES: SkillCategory[] = [
     name: 'Frontend',
     skills: [
       'React',
-      'Astro',
       'Next.js',
       'Tanstack Start',
+      'Flutter',
       'TailwindCSS',
+      'Material3',
       'shadcn/ui'
     ],
   },
@@ -82,6 +84,7 @@ export const SKILL_CATEGORIES: SkillCategory[] = [
       'MongoDB',
       'REST APIs',
       'GraphQL',
+      'Supabase',
     ],
   },
   {
@@ -101,7 +104,7 @@ export const SKILL_CATEGORIES: SkillCategory[] = [
   },
   {
     name: 'Testing',
-    skills: ['Vitest', 'Playwright', 'pytest', 'unittest', 'postman'],
+    skills: ['Vitest', 'Playwright', 'pytest', 'unittest', 'jUnit', 'postman'],
   },
 ]
 
@@ -159,6 +162,14 @@ export const PROJECTS: Project[] = [
 ]
 
 export const WORK_EXPERIENCE: WorkExperience[] = [
+  {
+    company: 'Techzarlogy',
+    title: 'Mobile Developer',
+    start: '2026',
+    end: 'Present',
+    link: 'https://techzarlogy.com/',
+    id: 'work0',
+  },
   {
     company: 'WeThinkCode_',
     title: 'Peer Technical Tutor',
@@ -236,7 +247,7 @@ export const SOCIAL_LINKS: SocialLink[] = [
   },
   {
     label: 'Resume',
-    link: 'https://drive.google.com/file/d/1-dEX2Fl2sLupFUxi9et93PKgZZwMtK18/view?usp=sharing',
+    link: 'https://drive.google.com/file/d/13ITbcweD-psu_PU6QZCTE4T6TIpbjt67/view?usp=sharing',
   },
   {
     label: 'npm',
