@@ -110,6 +110,16 @@ export const SKILL_CATEGORIES: SkillCategory[] = [
 
 export const PROJECTS: Project[] = [
   {
+    name: 'flutterbits',
+    description:
+      'tailwindcss and shadcn/ui re-imagined for Flutter. A styling engine and collection of production-ready Flutter components you can drop into your project and make it your own.',
+    link: 'https://flutterbits.vercel.app/',
+    image:
+      'https://res.cloudinary.com/dfjfdrloj/image/upload/v1781526818/flutterwindcss-image3_tpxrfv.png',
+    id: 'project0',
+    github: 'https://github.com/SiphoChris/flutterbits',
+  },
+  {
     name: 'supacommerce',
     description:
       'A modern headless e-commerce solution built with on Supabase that you drop into your project and make it your own.',
