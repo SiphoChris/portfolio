@@ -13,6 +13,7 @@ import {
 import Link from 'next/link'
 import { AnimatedBackground } from '@/components/ui/animated-background'
 import {
+  OSS_CONTRIBUTIONS,
   PROJECTS,
   WORK_EXPERIENCE,
   BLOG_POSTS,
@@ -229,6 +230,39 @@ export default function Personal() {
         </div>
       </motion.section>
 
+      {/* OSS Contributions */}
+
+      <motion.section
+        variants={VARIANTS_SECTION}
+        transition={TRANSITION_SECTION}
+      >
+        <h3 className="mb-5 text-lg font-medium">Open Source Contributions</h3>
+        <div className="flex flex-col space-y-2">
+          {OSS_CONTRIBUTIONS.map((contribution) => (
+            <Link
+              className="relative overflow-hidden rounded-2xl bg-zinc-300/30 p-px dark:bg-zinc-600/30"
+              href={contribution.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              key={contribution.id}
+            >
+              <Spotlight
+                className="from-zinc-900 via-zinc-800 to-zinc-700 blur-2xl dark:from-zinc-100 dark:via-zinc-200 dark:to-zinc-50"
+                size={64}
+              />
+              <div className="relative h-full w-full rounded-[15px] bg-white p-4 dark:bg-zinc-950">
+                <h4 className="font-normal dark:text-zinc-100">
+                  {contribution.project}
+                </h4>
+                <p className="text-zinc-500 dark:text-zinc-400">
+                  {contribution.description}
+                </p>
+              </div>
+            </Link>
+          ))}
+        </div>
+      </motion.section>
+
       {/* Projects */}
       <motion.section
         variants={VARIANTS_SECTION}
@@ -277,7 +311,7 @@ export default function Personal() {
         aria-labelledby="resources-heading"
       >
         <h3 id="resources-heading" className="mb-5 text-lg font-medium">
-          Resources
+          Authored Resources
         </h3>
 
         <div className="grid grid-cols-1 gap-4 rounded-2xl border border-zinc-200/60 bg-zinc-50/40 p-4 sm:grid-cols-2 md:grid-cols-3 dark:border-zinc-800/60 dark:bg-zinc-950/40">

@@ -7,6 +7,13 @@ type Project = {
   id: string
 }
 
+type ossContributions = {
+  project: string,
+  description: string,
+  link: string,
+  id: string
+}
+
 type WorkExperience = {
   company: string
   title: string
@@ -169,6 +176,29 @@ export const PROJECTS: Project[] = [
     id: 'project4',
     github: 'https://github.com/SiphoChris/howdoi-cli',
   },
+]
+
+
+export const OSS_CONTRIBUTIONS: ossContributions[] = [
+  {
+    project: 'shadcn/ui',
+    description:
+      'I created a PR to the shadcn/ui repo that added a new components registry to the ecosystem (lmscn). This is a components registry for interactive learning components you can drop into your LMS app in minutes. This was my first contribution to a major OSS project and taught me a lot about the open-source community.',
+    link: 'https://ui.shadcn.com/',
+    id: 'oss0',
+  },
+  {
+    project: 'MikroORM',
+    description: 'I create a PR to the MikroORM repo that fixed a crash in SchemaComparator.hasSameDefaultValue when a column\'s to.default is a non-string value. The method coerces from.default defensively (from.default.toString().toLowerCase()) but calls .toLowerCase() directly on to.default at the two === \'null\' guards. When to.default is a number or boolean (a column whose entity default is @Property({ default: 0 }) or @Property({ default: true })), it throws: TypeError: to.default.toLowerCase is not a function. This was a simple but critical two-line fix that I was able to contribute to the MikroORM repo.',
+    link: 'https://mikro-orm.io/',
+    id: 'oss1',
+  },
+  {
+    project: 'Open Mercato',
+    description: 'I create a bug report issue to the Open Mercato repo that describes a security finding in the integrations API route. The issue describes a pattern that warrants security attention beyond a simple UI bug. The issue was closed by the maintainer and was folded in the next release.',
+    link: 'https://openmercato.com/',
+    id: 'oss2',
+  }
 ]
 
 export const WORK_EXPERIENCE: WorkExperience[] = [
