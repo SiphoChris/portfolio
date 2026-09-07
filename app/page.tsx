@@ -232,7 +232,7 @@ export default function Personal() {
 
       {/* OSS Contributions */}
 
-      <motion.section
+      {/* <motion.section
         variants={VARIANTS_SECTION}
         transition={TRANSITION_SECTION}
       >
@@ -261,7 +261,7 @@ export default function Personal() {
             </Link>
           ))}
         </div>
-      </motion.section>
+      </motion.section> */}
 
       {/* Projects */}
       <motion.section
