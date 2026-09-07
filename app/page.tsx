@@ -12,8 +12,8 @@ import {
 } from '@/components/ui/morphing-dialog'
 import Link from 'next/link'
 import { AnimatedBackground } from '@/components/ui/animated-background'
+// OSS_CONTRIBUTIONS,
 import {
-  OSS_CONTRIBUTIONS,
   PROJECTS,
   WORK_EXPERIENCE,
   BLOG_POSTS,
