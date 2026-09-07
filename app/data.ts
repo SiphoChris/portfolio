@@ -204,27 +204,35 @@ export const OSS_CONTRIBUTIONS: ossContributions[] = [
 export const WORK_EXPERIENCE: WorkExperience[] = [
   {
     company: 'Techzarlogy',
-    title: 'Mobile Developer',
+    title: 'Software Engineer',
     start: '2026',
     end: 'Present',
     link: 'https://techzarlogy.com/',
     id: 'work0',
   },
   {
-    company: 'WeThinkCode_',
-    title: 'Peer Technical Tutor',
-    start: '2025',
-    end: 'Present',
-    link: 'https://wethinkcode.co.za/',
+    company: 'Techzarlogy',
+    title: 'Software Engineer (intern)',
+    start: '2026',
+    end: '2026',
+    link: 'https://techzarlogy.com/',
     id: 'work1',
   },
   {
+    company: 'WeThinkCode_',
+    title: 'Peer Technical Tutor',
+    start: '2025',
+    end: '2026',
+    link: 'https://wethinkcode.co.za/',
+    id: 'work2',
+  },
+  {
     company: 'LC Studio',
-    title: 'Full Stack Developer',
+    title: 'Fullstack Developer (intern)',
     start: '2024',
     end: '2025',
     link: 'https://lcstudio.co.za/',
-    id: 'work2',
+    id: 'work3',
   },
 ]
 
