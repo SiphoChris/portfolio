@@ -202,14 +202,14 @@ export const OSS_CONTRIBUTIONS: ossContributions[] = [
 ]
 
 export const WORK_EXPERIENCE: WorkExperience[] = [
-  {
-    company: 'Techzarlogy',
-    title: 'Junior Software Engineer',
-    start: '2026',
-    end: 'Present',
-    link: 'https://techzarlogy.com/',
-    id: 'work0',
-  },
+  // {
+  //   company: 'Techzarlogy',
+  //   title: 'Junior Software Engineer',
+  //   start: '2026',
+  //   end: 'Present',
+  //   link: 'https://techzarlogy.com/',
+  //   id: 'work0',
+  // },
   {
     company: 'Techzarlogy',
     title: 'Junior Software Engineer (intern)',
