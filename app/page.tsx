@@ -150,7 +150,8 @@ export default function Personal() {
           {/* view resume */}
           <Magnetic springOptions={{ bounce: 0 }} intensity={0.3}>
             <Link
-              href="https://drive.google.com/file/d/1E8MQGITLQCrhtM6EYlbXznChyRdwUZSs/view?usp=sharing"
+              {/* href="https://drive.google.com/file/d/1E8MQGITLQCrhtM6EYlbXznChyRdwUZSs/view?usp=sharing" resume */}
+              href="https://drive.google.com/file/d/1wiL5jDovR2iBCQ3ofuidimjIDfW4OgZc/view?usp=sharing" {/* cv */}
               target="_blank"
               className="group inline-flex items-center gap-2 rounded-full border border-zinc-200 bg-zinc-50 px-3 py-1 text-sm text-zinc-700 dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-300"
             >
